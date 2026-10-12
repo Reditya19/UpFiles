@@ -1,31 +1,154 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
+/* =========================================================
+   Portfolio Reditya - style.css
+   Tema warna: Cream
+   ========================================================= */
 
-    <header>
-        <h1>Contact</h1>
+:root {
+    --cream:        #fdf6e3; /* warna dasar cream */
+    --cream-dark:   #f3e6c8; /* cream lebih gelap untuk header */
+    --cream-card:   #fffdf6; /* cream terang untuk kartu */
+    --brown:        #7b5e3b; /* coklat untuk judul */
+    --brown-dark:   #574128; /* coklat tua */
+    --accent:       #c89b6a; /* aksen emas/coklat muda */
+    --text:         #4a3f35; /* warna teks utama */
+    --border:       #e8d8b8; /* garis pembatas */
+}
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Portfolio.html">Portfolio</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
-    </header>
+* {
+    box-sizing: border-box;
+}
 
-    <main>
-        <h2>Kontak</h2>
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-        <p>Email: reditya.nur24@students.utdi.ac.id</p>
-        <p>Universitas Teknologi Digital Indonesia</p>
-        <p>Yogyakarta</p>
-    </main>
+/* ---------------- Header & Navigator ---------------- */
 
-</body>
-</html>
+header {
+    background-color: var(--cream-dark);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 1rem 1.25rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 1rem;
+    color: var(--brown-dark);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--brown);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+nav a.active {
+    background-color: var(--brown);
+    border-color: var(--brown);
+    color: #fff;
+}
+
+/* ---------------- Konten Utama ---------------- */
+
+main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+h2 {
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    color: var(--brown);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 0 0 0.5rem;
+    color: var(--brown-dark);
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+/* ---------------- Kartu Project ---------------- */
+
+.project {
+    margin-bottom: 1.25rem;
+    padding: 1.1rem 1.35rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(123, 94, 59, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(123, 94, 59, 0.15);
+}
+
+.project p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------------- Footer ---------------- */
+
+footer {
+    padding: 1.25rem 1rem;
+    border-top: 1px solid var(--border);
+    background-color: var(--cream-dark);
+    color: var(--brown);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* ---------------- Responsif ---------------- */
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+}
